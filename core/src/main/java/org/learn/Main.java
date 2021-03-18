@@ -18,9 +18,7 @@ public class Main {
 
         log.info("Got a number generated: {} ",numberGenerator.next());
 
-        Game game=context.getBean(GameImpl.class);
 
-        game.reset();
 
         context.close();
     }
