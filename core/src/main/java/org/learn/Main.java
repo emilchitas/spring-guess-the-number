@@ -14,7 +14,7 @@ public class Main {
 
         ConfigurableApplicationContext context=new GenericGroovyApplicationContext(CONFIG_LOCATION);
 
-        NumberGenerator numberGenerator = context.getBean("numberGenerator", NumberGenerator.class);
+        NumberGenerator numberGenerator = context.getBean( NumberGenerator.class);
 
         log.info("Got a number generated: {} ", numberGenerator.next());
 
