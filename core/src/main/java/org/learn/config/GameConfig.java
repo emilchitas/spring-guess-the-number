@@ -2,13 +2,16 @@ package org.learn.config;
 
 import org.learn.GuessCount;
 import org.learn.MaxNumber;
+import org.learn.MinNumber;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource(value = "classpath:application.properties")
+@ComponentScan(basePackages = "org.learn")
 public class GameConfig {
 
     @Value("${game.max-number:100}")
@@ -33,7 +36,7 @@ public class GameConfig {
     }
 
     @Bean
-    @MaxNumber
+    @MinNumber
     public int minNumber() {
         return minNumber;
     }

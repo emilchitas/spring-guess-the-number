@@ -1,6 +1,6 @@
 package org.learn;
 
-import org.learn.config.AppConfig;
+import org.learn.config.GameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -14,18 +14,8 @@ public class Main {
         log.info("Guess the number game");
 
         ConfigurableApplicationContext context
-                = new AnnotationConfigApplicationContext(AppConfig.class);
+                = new AnnotationConfigApplicationContext(GameConfig.class);
 
-        NumberGenerator numberGenerator
-                = context.getBean(NumberGenerator.class);
-
-        log.info("number = {} ", numberGenerator.next());
-
-        MessageGenerator messageGenerator
-                = context.getBean(MessageGenerator.class);
-
-        log.info("getMainMessage {}", messageGenerator.getMainMessage());
-        log.info("getResultMessage {}", messageGenerator.getResultMessage());
         context.close();
     }
 }
