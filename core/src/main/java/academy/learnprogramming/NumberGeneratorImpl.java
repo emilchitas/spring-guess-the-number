@@ -1,14 +1,15 @@
-package org.learn;
-
-import org.springframework.stereotype.Component;
+package academy.learnprogramming;
 
 import java.util.Random;
 
-@Component("generator")
 public class NumberGeneratorImpl implements NumberGenerator {
+
+    // == fields ==
     private final Random random = new Random();
+
     private int maxNumber = 100;
 
+    // == public methods ==
     @Override
     public int next() {
         return random.nextInt(maxNumber);
