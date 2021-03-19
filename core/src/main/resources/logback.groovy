@@ -8,7 +8,7 @@ appender("Console-Appender", ConsoleAppender) {
     }
 }
 logger("org.learn", DEBUG, ["Console-Appender"], false)
-logger("org.springframework", TRACE, ["Console-Appender"], false)
+logger("org.springframework", DEBUG, ["Console-Appender"], false)
 //logger("org.springframework.boot", INFO, ["Console-Appender"], false)
 //logger("org.thymeleaf", INFO, ["Console-Appender"], false)
 root(INFO, ["Console-Appender"])

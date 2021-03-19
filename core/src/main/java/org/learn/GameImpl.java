@@ -101,6 +101,11 @@ public class GameImpl implements Game {
         return !isGameWon() && remainingGuesses <= 0;
     }
 
+    @Override
+    public int getGuessCount() {
+        return guessCount;
+    }
+
     private void checkValidNumberRange() {
         validNumberRange = (guess >= smallest) && (guess <= biggest);
     }

@@ -12,5 +12,6 @@ public interface Game {
     boolean isValidNumberRange();
     boolean isGameWon();
     boolean isGameLost();
+    int getGuessCount();
 
 }
