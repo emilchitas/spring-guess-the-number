@@ -6,13 +6,20 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "org.learn")
-public class Appconfig {
+public class AppConfig {
+
     @Bean
     public NumberGenerator numberGenerator(){
         return new NumberGeneratorImpl();
     }
+
     @Bean
     public Game game(){
         return new GameImpl();
+    }
+
+    @Bean
+    public MessageGenerator messageGenerator(){
+        return new MessageGeneratorImpl();
     }
 }

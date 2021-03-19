@@ -3,7 +3,8 @@ import static ch.qos.logback.classic.Level.INFO
 
 appender("Console-Appender", ConsoleAppender) {
     encoder(PatternLayoutEncoder) {
-        pattern = "%date [%thread] [%-5level] %logger{36} - %msg%n"
+//        pattern = "%date [%thread] [%-5level] %logger{36} - %msg%n"
+        pattern = "[%-5level] %logger{36} - %msg%n"
     }
 }
 logger("org.learn", DEBUG, ["Console-Appender"], false)
