@@ -1,3 +1,4 @@
 rootProject.name = 'guess-the-number'
 include 'core'
+include 'console'
 
